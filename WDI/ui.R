@@ -25,9 +25,12 @@ shinyUI(
         br(),
         br(),
         br(),
+        br(),
+        br(),
+        br(),
+        br(),
         helpText("Created by Shlomi Lifshits (2014)"),
-        helpText(HTML("Powered by <a href = \"http://www.rstudio.com/shiny/\">shiny</a>.")),
-        img(src="logo.jpg",height=52,width=52) 
+        helpText(HTML("Powered by <a href = \"http://www.rstudio.com/shiny/\">Shiny</a>."))
       ),
       mainPanel(        
         fluidRow(
