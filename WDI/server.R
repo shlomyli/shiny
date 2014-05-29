@@ -7,7 +7,6 @@ library(WDI)
 library(knitr)
 library(googleVis) 
 
-source("global.R")
 
 shinyServer(function(input, output,session) {
   
