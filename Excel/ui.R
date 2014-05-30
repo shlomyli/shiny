@@ -16,7 +16,9 @@ shinyUI(
       ),
       column(4,
              uiOutput("selectClassName"),
-             plotOutput("pairsPlot")
+             plotOutput("pairsPlot"),
+             helpText("Created by Shlomi Lifshits (2014)"),
+             helpText(HTML("Powered by <a href = \"http://www.rstudio.com/shiny/\">Shiny</a>."))
       )
     )
   )
