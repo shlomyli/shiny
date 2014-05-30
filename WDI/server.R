@@ -8,10 +8,10 @@ library(knitr)
 library(googleVis) 
 
 
-shinyServer(function(input, output,session) {
+shinyServer(function(input, output) {
   
   df<-reactive({
-    df<-WDI(country=input$country,WDI.INTERNET.INDICATOR.NAME)[,c("year",WDI.INTERNET.INDICATOR.NAME)]
+    WDI(country=input$country,WDI.INTERNET.INDICATOR.NAME)[,c("year",WDI.INTERNET.INDICATOR.NAME)]
   })
   
   num.internet.users<-reactive({
@@ -28,8 +28,9 @@ shinyServer(function(input, output,session) {
     lower.case<-tolower(substr(input$country,1,1))
     my.url<-paste("<img src=\"http://www.crwflags.com/fotw/images/",lower.case,"/",
                   tolower(input$country),".gif\"  width=\"100\" height=\"100\">",sep="")
-    write(my.url,file="www/country_image.html")
-    HTML(readLines( "www/country_image.html"))
+    ##write(my.url,file="www/country_image.html")
+    ##HTML(readLines( "www/country_image.html"))
+    HTML(my.url)
   })
   
   output$view <- renderGvis({
