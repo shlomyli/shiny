@@ -43,7 +43,7 @@ shinyUI(
           )
         ),
         htmlOutput("view"),
-        p("Furmula \\(\\frac{x}{y} \\cdot 100\\), where x is the total number of users and y is the total population size.")
+        p("Formula \\(\\frac{x}{y} \\cdot 100\\), where x is the total number of users and y is the total population size.")
       )
     )
   )
